@@ -1,0 +1,43 @@
+header {
+  height: 200px;
+  background: lightblue;
+  text-align: center;
+
+  h1 {
+    color: red;
+  }
+  .menu {
+    ul {
+      margin: 0 auto;
+      padding : 0;
+      list-style: none;
+      width: 400px;
+
+      li {
+        float: left;
+        a {
+          color: #000;
+          font-weight: bold;
+          display: inline-block;
+          padding: 5px 18px;
+          text-decoration: none;
+          position: relative;
+          &:hover {
+            text-decoration : underline;
+          }
+          &::before {
+            content: '*';
+            position: absolute;
+            left: 0;
+            top: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.heading {
+  font-style: italic;
+}
+

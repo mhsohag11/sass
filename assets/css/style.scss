@@ -1,0 +1,25 @@
+@import "./variable";
+
+@import "./_header";
+
+@mixin myCustom ($color) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color;
+}
+
+
+section {
+  background: $primaryBg;
+  .content {
+    height: 300px;
+    @include myCustom('');
+  }
+}
+footer {
+  @include myCustom($myColoer);
+  height : 200px;
+  background : $footerBg;
+  @extend .heading;
+}
